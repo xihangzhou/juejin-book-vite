@@ -12,7 +12,7 @@ export async function transformRequest(
 ) {
   const { pluginContainer, moduleGraph } = serverContext;
   url = cleanUrl(url);
-  let mod = await moduleGraph.getModuleByUrl(url);
+  const mod = await moduleGraph.ensureEntryFromUrl(url);
   if (mod && mod.transformResult) {
     return mod.transformResult;
   }
@@ -56,8 +56,6 @@ export function transformMiddleware(
       if (result && typeof result !== "string") {
         result = result.code;
       }
-      const { moduleGraph } = serverContext;
-      mod = await moduleGraph.ensureEntryFromUrl(url);
       // 编译完成，返回响应给浏览器
       res.statusCode = 200;
       res.setHeader("Content-Type", "application/javascript");
