@@ -8,6 +8,10 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- script标签的路径如果写为/src/main.tsx这种绝对路径就是以电脑或者说服务器的根目录开始找找到根目录下面的src/main.tsx文件 -->
+    <!-- 显然我们在这个时候的根目录应该是项目的根目录，所以需要服务器支持这种形式的引入，应该添加项目的路径到这种绝对路径之前 -->
+    <!-- script标签的相对路径是以当前浏览器所在的路径为参照的，比如当前所载路径为home/index -->
+    <!-- sxript的src标签的相对路径为./src/main,tsx,那么最后实际发起的请求为home/src/main.tsx -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
