@@ -5,13 +5,15 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "build": "tsup ./src/index.ts --format cjs,esm --dts --clean --minify"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "esbuild-darwin-arm64": "^0.14.28",
-    "vitest": "^0.7.12"
+    "vitest": "^0.7.12",
+    "tsup": "^5.12.4"
   }
 }

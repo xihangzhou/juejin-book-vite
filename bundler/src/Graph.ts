@@ -105,6 +105,7 @@ export class Graph {
       for (const dependency of module.dependencyModules) {
         // 检测到循环依赖
         if (parent[dependency.id]) {
+          // 如果这个依赖还没有被分析过那么就统计这个循环依赖的路径到cyclePathList中存起来
           if (!analysedModule[dependency.id]) {
             cyclePathList.push(getCyclePath(dependency.id, module.id));
           }
@@ -113,7 +114,9 @@ export class Graph {
         parent[dependency.id] = module.id;
         analyseModule(dependency);
       }
+      // 当把子依赖都递归遍历完了就标记这个模块已经遍历过
       analysedModule[module.id] = true;
+      // 并且加入到orderedModules
       orderedModules.push(module);
     }
 

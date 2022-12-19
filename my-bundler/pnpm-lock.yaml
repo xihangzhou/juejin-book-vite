@@ -1,20 +1,48 @@
 lockfileVersion: 5.3
 
 specifiers:
-  esbuild-darwin-arm64: ^0.14.28
-  tsup: ^5.12.4
-  vitest: ^0.7.12
+  '@types/node': ^18.11.9
+  magic-string: ^0.26.7
+  tsup: ^6.5.0
+  typescript: ^4.9.3
+  typescript-transform-paths: ^3.4.4
+
+dependencies:
+  magic-string: mirrors.tencent.com/magic-string/0.26.7
 
 devDependencies:
-  esbuild-darwin-arm64: registry.npmmirror.com/esbuild-darwin-arm64/0.14.28
-  tsup: mirrors.tencent.com/tsup/5.12.9
-  vitest: registry.npmmirror.com/vitest/0.7.12
+  '@types/node': mirrors.tencent.com/@types/node/18.11.9
+  tsup: mirrors.tencent.com/tsup/6.5.0_typescript@4.9.3
+  typescript: mirrors.tencent.com/typescript/4.9.3
+  typescript-transform-paths: mirrors.tencent.com/typescript-transform-paths/3.4.4_typescript@4.9.3
 
 packages:
 
   /concat-map/0.0.1:
     resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
     dev: true
+
+  mirrors.tencent.com/@esbuild/android-arm/0.15.16:
+    resolution: {integrity: sha512-nyB6CH++2mSgx3GbnrJsZSxzne5K0HMyNIWafDHqYy7IwxFc4fd/CgHVZXr8Eh+Q3KbIAcAe3vGyqIPhGblvMQ==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/@esbuild%2fandroid-arm/-/android-arm-0.15.16.tgz}
+    name: '@esbuild/android-arm'
+    version: 0.15.16
+    engines: {node: '>=12'}
+    cpu: [arm]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  mirrors.tencent.com/@esbuild/linux-loong64/0.15.16:
+    resolution: {integrity: sha512-SDLfP1uoB0HZ14CdVYgagllgrG7Mdxhkt4jDJOKl/MldKrkQ6vDJMZKl2+5XsEY/Lzz37fjgLQoJBGuAw/x8kQ==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/@esbuild%2flinux-loong64/-/linux-loong64-0.15.16.tgz}
+    name: '@esbuild/linux-loong64'
+    version: 0.15.16
+    engines: {node: '>=12'}
+    cpu: [loong64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
 
   mirrors.tencent.com/@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/@nodelib%2ffs.scandir/-/fs.scandir-2.1.5.tgz}
@@ -41,6 +69,12 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': mirrors.tencent.com/@nodelib/fs.scandir/2.1.5
       fastq: mirrors.tencent.com/fastq/1.13.0
+    dev: true
+
+  mirrors.tencent.com/@types/node/18.11.9:
+    resolution: {integrity: sha512-CRpX21/kGdzjOpFsZSkcrXMGIBWMGNIHXXBVFSH+ggkftxg+XYP20TESbh+zFvFj3EQOl5byk0HTRn1IL6hbqg==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/@types%2fnode/-/node-18.11.9.tgz}
+    name: '@types/node'
+    version: 18.11.9
     dev: true
 
   mirrors.tencent.com/any-promise/1.3.0:
@@ -97,7 +131,7 @@ packages:
       fill-range: mirrors.tencent.com/fill-range/7.0.1
     dev: true
 
-  mirrors.tencent.com/bundle-require/3.1.2_esbuild@0.14.28:
+  mirrors.tencent.com/bundle-require/3.1.2_esbuild@0.15.16:
     resolution: {integrity: sha512-Of6l6JBAxiyQ5axFxUM6dYeP/W7X2Sozeo/4EYB9sJhL+dqL7TKjg+shwxp6jlu/6ZSERfsYtIpSJ1/x3XkAEA==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/bundle-require/-/bundle-require-3.1.2.tgz}
     id: mirrors.tencent.com/bundle-require/3.1.2
     name: bundle-require
@@ -106,7 +140,7 @@ packages:
     peerDependencies:
       esbuild: '>=0.13'
     dependencies:
-      esbuild: mirrors.tencent.com/esbuild/0.14.28
+      esbuild: mirrors.tencent.com/esbuild/0.15.16
       load-tsconfig: mirrors.tencent.com/load-tsconfig/0.2.3
     dev: true
 
@@ -175,10 +209,10 @@ packages:
       path-type: mirrors.tencent.com/path-type/4.0.0
     dev: true
 
-  mirrors.tencent.com/esbuild-android-64/0.14.28:
-    resolution: {integrity: sha512-A52C3zq+9tNwCqZ+4kVLBxnk/WnrYM8P2+QNvNE9B6d2OVPs214lp3g6UyO+dKDhUdefhfPCuwkP8j2A/+szNA==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-android-64/-/esbuild-android-64-0.14.28.tgz}
+  mirrors.tencent.com/esbuild-android-64/0.15.16:
+    resolution: {integrity: sha512-Vwkv/sT0zMSgPSVO3Jlt1pUbnZuOgtOQJkJkyyJFAlLe7BiT8e9ESzo0zQSx4c3wW4T6kGChmKDPMbWTgtliQA==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-android-64/-/esbuild-android-64-0.15.16.tgz}
     name: esbuild-android-64
-    version: 0.14.28
+    version: 0.15.16
     engines: {node: '>=12'}
     cpu: [x64]
     os: [android]
@@ -186,10 +220,10 @@ packages:
     dev: true
     optional: true
 
-  mirrors.tencent.com/esbuild-android-arm64/0.14.28:
-    resolution: {integrity: sha512-sm0fDEGElZhMC3HLZeECI2juE4aG7uPfMBMqNUhy9CeX399Pz8rC6e78OXMXInGjSdEAwQmCOHmfsP7uv3Q8rA==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-android-arm64/-/esbuild-android-arm64-0.14.28.tgz}
+  mirrors.tencent.com/esbuild-android-arm64/0.15.16:
+    resolution: {integrity: sha512-lqfKuofMExL5niNV3gnhMUYacSXfsvzTa/58sDlBET/hCOG99Zmeh+lz6kvdgvGOsImeo6J9SW21rFCogNPLxg==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-android-arm64/-/esbuild-android-arm64-0.15.16.tgz}
     name: esbuild-android-arm64
-    version: 0.14.28
+    version: 0.15.16
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [android]
@@ -197,10 +231,10 @@ packages:
     dev: true
     optional: true
 
-  mirrors.tencent.com/esbuild-darwin-64/0.14.28:
-    resolution: {integrity: sha512-nzDd7mQ44FvsFHtOafZdBgn3Li5SMsnMnoz1J2MM37xJmR3wGNTFph88KypjHgWqwbxCI7MXS1U+sN4qDeeW6Q==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-darwin-64/-/esbuild-darwin-64-0.14.28.tgz}
+  mirrors.tencent.com/esbuild-darwin-64/0.15.16:
+    resolution: {integrity: sha512-wo2VWk/n/9V2TmqUZ/KpzRjCEcr00n7yahEdmtzlrfQ3lfMCf3Wa+0sqHAbjk3C6CKkR3WKK/whkMq5Gj4Da9g==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-darwin-64/-/esbuild-darwin-64-0.15.16.tgz}
     name: esbuild-darwin-64
-    version: 0.14.28
+    version: 0.15.16
     engines: {node: '>=12'}
     cpu: [x64]
     os: [darwin]
@@ -208,10 +242,10 @@ packages:
     dev: true
     optional: true
 
-  mirrors.tencent.com/esbuild-darwin-arm64/0.14.28:
-    resolution: {integrity: sha512-XEq/bLR/glsUl+uGrBimQzOVs/CmwI833fXUhP9xrLI3IJ+rKyrZ5IA8u+1crOEf1LoTn8tV+hInmX6rGjbScw==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.14.28.tgz}
+  mirrors.tencent.com/esbuild-darwin-arm64/0.15.16:
+    resolution: {integrity: sha512-fMXaUr5ou0M4WnewBKsspMtX++C1yIa3nJ5R2LSbLCfJT3uFdcRoU/NZjoM4kOMKyOD9Sa/2vlgN8G07K3SJnw==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.15.16.tgz}
     name: esbuild-darwin-arm64
-    version: 0.14.28
+    version: 0.15.16
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [darwin]
@@ -219,10 +253,10 @@ packages:
     dev: true
     optional: true
 
-  mirrors.tencent.com/esbuild-freebsd-64/0.14.28:
-    resolution: {integrity: sha512-rTKLgUj/HEcPeE5XZ7IZwWpFx7IWMfprN7QRk/TUJE1s1Ipb58esboIesUpjirJz/BwrgHq+FDG9ChAI8dZAtQ==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-freebsd-64/-/esbuild-freebsd-64-0.14.28.tgz}
+  mirrors.tencent.com/esbuild-freebsd-64/0.15.16:
+    resolution: {integrity: sha512-UzIc0xlRx5x9kRuMr+E3+hlSOxa/aRqfuMfiYBXu2jJ8Mzej4lGL7+o6F5hzhLqWfWm1GWHNakIdlqg1ayaTNQ==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-freebsd-64/-/esbuild-freebsd-64-0.15.16.tgz}
     name: esbuild-freebsd-64
-    version: 0.14.28
+    version: 0.15.16
     engines: {node: '>=12'}
     cpu: [x64]
     os: [freebsd]
@@ -230,10 +264,10 @@ packages:
     dev: true
     optional: true
 
-  mirrors.tencent.com/esbuild-freebsd-arm64/0.14.28:
-    resolution: {integrity: sha512-sBffxD1UMOsB7aWMoExmipycjcy3HJGwmqE4GQZUTZvdiH4GhjgUiVdtPyt7kSCdL40JqnWQJ4b1l8Y51oCF4Q==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-freebsd-arm64/-/esbuild-freebsd-arm64-0.14.28.tgz}
+  mirrors.tencent.com/esbuild-freebsd-arm64/0.15.16:
+    resolution: {integrity: sha512-8xyiYuGc0DLZphFQIiYaLHlfoP+hAN9RHbE+Ibh8EUcDNHAqbQgUrQg7pE7Bo00rXmQ5Ap6KFgcR0b4ALZls1g==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-freebsd-arm64/-/esbuild-freebsd-arm64-0.15.16.tgz}
     name: esbuild-freebsd-arm64
-    version: 0.14.28
+    version: 0.15.16
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [freebsd]
@@ -241,10 +275,10 @@ packages:
     dev: true
     optional: true
 
-  mirrors.tencent.com/esbuild-linux-32/0.14.28:
-    resolution: {integrity: sha512-+Wxidh3fBEQ9kHcCsD4etlBTMb1n6QY2uXv3rFhVn88CY/JP782MhA57/ipLMY4kOLeSKEuFGN4rtjHuhmRMig==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-linux-32/-/esbuild-linux-32-0.14.28.tgz}
+  mirrors.tencent.com/esbuild-linux-32/0.15.16:
+    resolution: {integrity: sha512-iGijUTV+0kIMyUVoynK0v+32Oi8yyp0xwMzX69GX+5+AniNy/C/AL1MjFTsozRp/3xQPl7jVux/PLe2ds10/2w==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-linux-32/-/esbuild-linux-32-0.15.16.tgz}
     name: esbuild-linux-32
-    version: 0.14.28
+    version: 0.15.16
     engines: {node: '>=12'}
     cpu: [ia32]
     os: [linux]
@@ -252,10 +286,10 @@ packages:
     dev: true
     optional: true
 
-  mirrors.tencent.com/esbuild-linux-64/0.14.28:
-    resolution: {integrity: sha512-7+xgsC4LvR6cnzaBdiljNnPDjbkwzahogN+S9uy9AoYw7ZjPnnXc6sjQAVCbqGb7MEgrWdpa6u/Tao79i4lWxg==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-linux-64/-/esbuild-linux-64-0.14.28.tgz}
+  mirrors.tencent.com/esbuild-linux-64/0.15.16:
+    resolution: {integrity: sha512-tuSOjXdLw7VzaUj89fIdAaQT7zFGbKBcz4YxbWrOiXkwscYgE7HtTxUavreBbnRkGxKwr9iT/gmeJWNm4djy/g==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-linux-64/-/esbuild-linux-64-0.15.16.tgz}
     name: esbuild-linux-64
-    version: 0.14.28
+    version: 0.15.16
     engines: {node: '>=12'}
     cpu: [x64]
     os: [linux]
@@ -263,10 +297,10 @@ packages:
     dev: true
     optional: true
 
-  mirrors.tencent.com/esbuild-linux-arm/0.14.28:
-    resolution: {integrity: sha512-L5isjmlLbh9E0WVllXiVETbScgMbth/+XkXQii1WwgO1RvLIfaGrVFz8d2n6EH/ImtgYxPYGx+OcvIKQBc91Rg==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-linux-arm/-/esbuild-linux-arm-0.14.28.tgz}
+  mirrors.tencent.com/esbuild-linux-arm/0.15.16:
+    resolution: {integrity: sha512-XKcrxCEXDTOuoRj5l12tJnkvuxXBMKwEC5j0JISw3ziLf0j4zIwXbKbTmUrKFWbo6ZgvNpa7Y5dnbsjVvH39bQ==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-linux-arm/-/esbuild-linux-arm-0.15.16.tgz}
     name: esbuild-linux-arm
-    version: 0.14.28
+    version: 0.15.16
     engines: {node: '>=12'}
     cpu: [arm]
     os: [linux]
@@ -274,10 +308,10 @@ packages:
     dev: true
     optional: true
 
-  mirrors.tencent.com/esbuild-linux-arm64/0.14.28:
-    resolution: {integrity: sha512-EjRHgwg+kgXABzyoPGPOPg4d5wZqRnZ/ZAxBDzLY+i6DS8OUfTSlZHWIOZzU4XF7125WxRBg9ULbrFJBl+57Eg==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-linux-arm64/-/esbuild-linux-arm64-0.14.28.tgz}
+  mirrors.tencent.com/esbuild-linux-arm64/0.15.16:
+    resolution: {integrity: sha512-mPYksnfHnemNrvjrDhZyixL/AfbJN0Xn9S34ZOHYdh6/jJcNd8iTsv3JwJoEvTJqjMggjMhGUPJAdjnFBHoH8A==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-linux-arm64/-/esbuild-linux-arm64-0.15.16.tgz}
     name: esbuild-linux-arm64
-    version: 0.14.28
+    version: 0.15.16
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [linux]
@@ -285,10 +319,10 @@ packages:
     dev: true
     optional: true
 
-  mirrors.tencent.com/esbuild-linux-mips64le/0.14.28:
-    resolution: {integrity: sha512-krx9SSg7yfiUKk64EmjefOyiEF6nv2bRE4um/LiTaQ6Y/6FP4UF3/Ou/AxZVyR154uSRq63xejcAsmswXAYRsw==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-linux-mips64le/-/esbuild-linux-mips64le-0.14.28.tgz}
+  mirrors.tencent.com/esbuild-linux-mips64le/0.15.16:
+    resolution: {integrity: sha512-kSJO2PXaxfm0pWY39+YX+QtpFqyyrcp0ZeI8QPTrcFVQoWEPiPVtOfTZeS3ZKedfH+Ga38c4DSzmKMQJocQv6A==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-linux-mips64le/-/esbuild-linux-mips64le-0.15.16.tgz}
     name: esbuild-linux-mips64le
-    version: 0.14.28
+    version: 0.15.16
     engines: {node: '>=12'}
     cpu: [mips64el]
     os: [linux]
@@ -296,10 +330,10 @@ packages:
     dev: true
     optional: true
 
-  mirrors.tencent.com/esbuild-linux-ppc64le/0.14.28:
-    resolution: {integrity: sha512-LD0Xxu9g+DNuhsEBV5QuVZ4uKVBMup0xPIruLweuAf9/mHXFnaCuNXUBF5t0DxKl7GQ5MSioKtnb92oMo+QXEw==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-linux-ppc64le/-/esbuild-linux-ppc64le-0.14.28.tgz}
+  mirrors.tencent.com/esbuild-linux-ppc64le/0.15.16:
+    resolution: {integrity: sha512-NimPikwkBY0yGABw6SlhKrtT35sU4O23xkhlrTT/O6lSxv3Pm5iSc6OYaqVAHWkLdVf31bF4UDVFO+D990WpAA==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-linux-ppc64le/-/esbuild-linux-ppc64le-0.15.16.tgz}
     name: esbuild-linux-ppc64le
-    version: 0.14.28
+    version: 0.15.16
     engines: {node: '>=12'}
     cpu: [ppc64]
     os: [linux]
@@ -307,10 +341,10 @@ packages:
     dev: true
     optional: true
 
-  mirrors.tencent.com/esbuild-linux-riscv64/0.14.28:
-    resolution: {integrity: sha512-L/DWfRh2P0vxq4Y+qieSNXKGdMg+e9Qe8jkbN2/8XSGYDTPzO2OcAxSujob4qIh7iSl+cknbXV+BvH0YFR0jbg==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-linux-riscv64/-/esbuild-linux-riscv64-0.14.28.tgz}
+  mirrors.tencent.com/esbuild-linux-riscv64/0.15.16:
+    resolution: {integrity: sha512-ty2YUHZlwFOwp7pR+J87M4CVrXJIf5ZZtU/umpxgVJBXvWjhziSLEQxvl30SYfUPq0nzeWKBGw5i/DieiHeKfw==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-linux-riscv64/-/esbuild-linux-riscv64-0.15.16.tgz}
     name: esbuild-linux-riscv64
-    version: 0.14.28
+    version: 0.15.16
     engines: {node: '>=12'}
     cpu: [riscv64]
     os: [linux]
@@ -318,10 +352,10 @@ packages:
     dev: true
     optional: true
 
-  mirrors.tencent.com/esbuild-linux-s390x/0.14.28:
-    resolution: {integrity: sha512-rrgxmsbmL8QQknWGnAL9bGJRQYLOi2AzXy5OTwfhxnj9eqjo5mSVbJXjgiq5LPUAMQZGdPH5yaNK0obAXS81Zw==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-linux-s390x/-/esbuild-linux-s390x-0.14.28.tgz}
+  mirrors.tencent.com/esbuild-linux-s390x/0.15.16:
+    resolution: {integrity: sha512-VkZaGssvPDQtx4fvVdZ9czezmyWyzpQhEbSNsHZZN0BHvxRLOYAQ7sjay8nMQwYswP6O2KlZluRMNPYefFRs+w==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-linux-s390x/-/esbuild-linux-s390x-0.15.16.tgz}
     name: esbuild-linux-s390x
-    version: 0.14.28
+    version: 0.15.16
     engines: {node: '>=12'}
     cpu: [s390x]
     os: [linux]
@@ -329,10 +363,10 @@ packages:
     dev: true
     optional: true
 
-  mirrors.tencent.com/esbuild-netbsd-64/0.14.28:
-    resolution: {integrity: sha512-h8wntIyOR8/xMVVM6TvJxxWKh4AjmLK87IPKpuVi8Pq0kyk0RMA+eo4PFGk5j2XK0D7dj8PcSF5NSlP9kN/j0A==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-netbsd-64/-/esbuild-netbsd-64-0.14.28.tgz}
+  mirrors.tencent.com/esbuild-netbsd-64/0.15.16:
+    resolution: {integrity: sha512-ElQ9rhdY51et6MJTWrCPbqOd/YuPowD7Cxx3ee8wlmXQQVW7UvQI6nSprJ9uVFQISqSF5e5EWpwWqXZsECLvXg==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-netbsd-64/-/esbuild-netbsd-64-0.15.16.tgz}
     name: esbuild-netbsd-64
-    version: 0.14.28
+    version: 0.15.16
     engines: {node: '>=12'}
     cpu: [x64]
     os: [netbsd]
@@ -340,10 +374,10 @@ packages:
     dev: true
     optional: true
 
-  mirrors.tencent.com/esbuild-openbsd-64/0.14.28:
-    resolution: {integrity: sha512-HBv18rVapbuDx52/fhZ/c/w6TXyaQAvRxiDDn5Hz/pBcwOs3cdd2WxeIKlWmDoqm2JMx5EVlq4IWgoaRX9mVkw==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-openbsd-64/-/esbuild-openbsd-64-0.14.28.tgz}
+  mirrors.tencent.com/esbuild-openbsd-64/0.15.16:
+    resolution: {integrity: sha512-KgxMHyxMCT+NdLQE1zVJEsLSt2QQBAvJfmUGDmgEq8Fvjrf6vSKB00dVHUEDKcJwMID6CdgCpvYNt999tIYhqA==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-openbsd-64/-/esbuild-openbsd-64-0.15.16.tgz}
     name: esbuild-openbsd-64
-    version: 0.14.28
+    version: 0.15.16
     engines: {node: '>=12'}
     cpu: [x64]
     os: [openbsd]
@@ -351,10 +385,10 @@ packages:
     dev: true
     optional: true
 
-  mirrors.tencent.com/esbuild-sunos-64/0.14.28:
-    resolution: {integrity: sha512-zlIxePhZxKYheR2vBCgPVvTixgo/ozOfOMoP6RZj8dxzquU1NgeyhjkcRXucbLCtmoNJ+i4PtWwPZTLuDd3bGg==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-sunos-64/-/esbuild-sunos-64-0.14.28.tgz}
+  mirrors.tencent.com/esbuild-sunos-64/0.15.16:
+    resolution: {integrity: sha512-exSAx8Phj7QylXHlMfIyEfNrmqnLxFqLxdQF6MBHPdHAjT7fsKaX6XIJn+aQEFiOcE4X8e7VvdMCJ+WDZxjSRQ==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-sunos-64/-/esbuild-sunos-64-0.15.16.tgz}
     name: esbuild-sunos-64
-    version: 0.14.28
+    version: 0.15.16
     engines: {node: '>=12'}
     cpu: [x64]
     os: [sunos]
@@ -362,10 +396,10 @@ packages:
     dev: true
     optional: true
 
-  mirrors.tencent.com/esbuild-windows-32/0.14.28:
-    resolution: {integrity: sha512-am9DIJxXlld1BOAY/VlvBQHMUCPL7S3gB/lnXIY3M4ys0gfuRqPf4EvMwZMzYUbFKBY+/Qb8SRgPRRGhwnJ8Kg==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-windows-32/-/esbuild-windows-32-0.14.28.tgz}
+  mirrors.tencent.com/esbuild-windows-32/0.15.16:
+    resolution: {integrity: sha512-zQgWpY5pUCSTOwqKQ6/vOCJfRssTvxFuEkpB4f2VUGPBpdddZfdj8hbZuFRdZRPIVHvN7juGcpgCA/XCF37mAQ==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-windows-32/-/esbuild-windows-32-0.15.16.tgz}
     name: esbuild-windows-32
-    version: 0.14.28
+    version: 0.15.16
     engines: {node: '>=12'}
     cpu: [ia32]
     os: [win32]
@@ -373,10 +407,10 @@ packages:
     dev: true
     optional: true
 
-  mirrors.tencent.com/esbuild-windows-64/0.14.28:
-    resolution: {integrity: sha512-78PhySDnmRZlsPNp/W/5Fim8iivlBQQxfhBFIqR7xwvfDmCFUSByyMKP7LCHgNtb04yNdop8nJJkJaQ8Xnwgiw==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-windows-64/-/esbuild-windows-64-0.14.28.tgz}
+  mirrors.tencent.com/esbuild-windows-64/0.15.16:
+    resolution: {integrity: sha512-HjW1hHRLSncnM3MBCP7iquatHVJq9l0S2xxsHHj4yzf4nm9TU4Z7k4NkeMlD/dHQ4jPlQQhwcMvwbJiOefSuZw==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-windows-64/-/esbuild-windows-64-0.15.16.tgz}
     name: esbuild-windows-64
-    version: 0.14.28
+    version: 0.15.16
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
@@ -384,10 +418,10 @@ packages:
     dev: true
     optional: true
 
-  mirrors.tencent.com/esbuild-windows-arm64/0.14.28:
-    resolution: {integrity: sha512-VhXGBTo6HELD8zyHXynV6+L2jWx0zkKnGx4TmEdSBK7UVFACtOyfUqpToG0EtnYyRZ0HESBhzPSVpP781ovmvA==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-windows-arm64/-/esbuild-windows-arm64-0.14.28.tgz}
+  mirrors.tencent.com/esbuild-windows-arm64/0.15.16:
+    resolution: {integrity: sha512-oCcUKrJaMn04Vxy9Ekd8x23O8LoU01+4NOkQ2iBToKgnGj5eo1vU9i27NQZ9qC8NFZgnQQZg5oZWAejmbsppNA==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-windows-arm64/-/esbuild-windows-arm64-0.15.16.tgz}
     name: esbuild-windows-arm64
-    version: 0.14.28
+    version: 0.15.16
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [win32]
@@ -395,34 +429,36 @@ packages:
     dev: true
     optional: true
 
-  mirrors.tencent.com/esbuild/0.14.28:
-    resolution: {integrity: sha512-YLNprkCcMVKQ5sekmCKEQ3Obu/L7s6+iij38xNKyBeSmSsTWur4Ky/9zB3XIGT8SCJITG/bZwAR2l7YOAXch4Q==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild/-/esbuild-0.14.28.tgz}
+  mirrors.tencent.com/esbuild/0.15.16:
+    resolution: {integrity: sha512-o6iS9zxdHrrojjlj6pNGC2NAg86ECZqIETswTM5KmJitq+R1YmahhWtMumeQp9lHqJaROGnsBi2RLawGnfo5ZQ==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild/-/esbuild-0.15.16.tgz}
     name: esbuild
-    version: 0.14.28
+    version: 0.15.16
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      esbuild-android-64: mirrors.tencent.com/esbuild-android-64/0.14.28
-      esbuild-android-arm64: mirrors.tencent.com/esbuild-android-arm64/0.14.28
-      esbuild-darwin-64: mirrors.tencent.com/esbuild-darwin-64/0.14.28
-      esbuild-darwin-arm64: mirrors.tencent.com/esbuild-darwin-arm64/0.14.28
-      esbuild-freebsd-64: mirrors.tencent.com/esbuild-freebsd-64/0.14.28
-      esbuild-freebsd-arm64: mirrors.tencent.com/esbuild-freebsd-arm64/0.14.28
-      esbuild-linux-32: mirrors.tencent.com/esbuild-linux-32/0.14.28
-      esbuild-linux-64: mirrors.tencent.com/esbuild-linux-64/0.14.28
-      esbuild-linux-arm: mirrors.tencent.com/esbuild-linux-arm/0.14.28
-      esbuild-linux-arm64: mirrors.tencent.com/esbuild-linux-arm64/0.14.28
-      esbuild-linux-mips64le: mirrors.tencent.com/esbuild-linux-mips64le/0.14.28
-      esbuild-linux-ppc64le: mirrors.tencent.com/esbuild-linux-ppc64le/0.14.28
-      esbuild-linux-riscv64: mirrors.tencent.com/esbuild-linux-riscv64/0.14.28
-      esbuild-linux-s390x: mirrors.tencent.com/esbuild-linux-s390x/0.14.28
-      esbuild-netbsd-64: mirrors.tencent.com/esbuild-netbsd-64/0.14.28
-      esbuild-openbsd-64: mirrors.tencent.com/esbuild-openbsd-64/0.14.28
-      esbuild-sunos-64: mirrors.tencent.com/esbuild-sunos-64/0.14.28
-      esbuild-windows-32: mirrors.tencent.com/esbuild-windows-32/0.14.28
-      esbuild-windows-64: mirrors.tencent.com/esbuild-windows-64/0.14.28
-      esbuild-windows-arm64: mirrors.tencent.com/esbuild-windows-arm64/0.14.28
+      '@esbuild/android-arm': mirrors.tencent.com/@esbuild/android-arm/0.15.16
+      '@esbuild/linux-loong64': mirrors.tencent.com/@esbuild/linux-loong64/0.15.16
+      esbuild-android-64: mirrors.tencent.com/esbuild-android-64/0.15.16
+      esbuild-android-arm64: mirrors.tencent.com/esbuild-android-arm64/0.15.16
+      esbuild-darwin-64: mirrors.tencent.com/esbuild-darwin-64/0.15.16
+      esbuild-darwin-arm64: mirrors.tencent.com/esbuild-darwin-arm64/0.15.16
+      esbuild-freebsd-64: mirrors.tencent.com/esbuild-freebsd-64/0.15.16
+      esbuild-freebsd-arm64: mirrors.tencent.com/esbuild-freebsd-arm64/0.15.16
+      esbuild-linux-32: mirrors.tencent.com/esbuild-linux-32/0.15.16
+      esbuild-linux-64: mirrors.tencent.com/esbuild-linux-64/0.15.16
+      esbuild-linux-arm: mirrors.tencent.com/esbuild-linux-arm/0.15.16
+      esbuild-linux-arm64: mirrors.tencent.com/esbuild-linux-arm64/0.15.16
+      esbuild-linux-mips64le: mirrors.tencent.com/esbuild-linux-mips64le/0.15.16
+      esbuild-linux-ppc64le: mirrors.tencent.com/esbuild-linux-ppc64le/0.15.16
+      esbuild-linux-riscv64: mirrors.tencent.com/esbuild-linux-riscv64/0.15.16
+      esbuild-linux-s390x: mirrors.tencent.com/esbuild-linux-s390x/0.15.16
+      esbuild-netbsd-64: mirrors.tencent.com/esbuild-netbsd-64/0.15.16
+      esbuild-openbsd-64: mirrors.tencent.com/esbuild-openbsd-64/0.15.16
+      esbuild-sunos-64: mirrors.tencent.com/esbuild-sunos-64/0.15.16
+      esbuild-windows-32: mirrors.tencent.com/esbuild-windows-32/0.15.16
+      esbuild-windows-64: mirrors.tencent.com/esbuild-windows-64/0.15.16
+      esbuild-windows-arm64: mirrors.tencent.com/esbuild-windows-arm64/0.15.16
     dev: true
 
   mirrors.tencent.com/execa/5.1.1:
@@ -638,6 +674,15 @@ packages:
     version: 4.7.0
     dev: true
 
+  mirrors.tencent.com/magic-string/0.26.7:
+    resolution: {integrity: sha512-hX9XH3ziStPoPhJxLq1syWuZMxbDvGNbVchfrdCtanC7D13888bMFow61x8axrx+GfHLtVeAx2kxL7tTGRl+Ow==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/magic-string/-/magic-string-0.26.7.tgz}
+    name: magic-string
+    version: 0.26.7
+    engines: {node: '>=12'}
+    dependencies:
+      sourcemap-codec: mirrors.tencent.com/sourcemap-codec/1.4.8
+    dev: false
+
   mirrors.tencent.com/merge-stream/2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/merge-stream/-/merge-stream-2.0.0.tgz}
     name: merge-stream
@@ -821,11 +866,11 @@ packages:
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
     dev: true
 
-  mirrors.tencent.com/rollup/2.79.1:
-    resolution: {integrity: sha512-uKxbd0IhMZOhjAiD5oAFp7BqvkA4Dv47qpOCtaNvng4HBwdbWtdOh8f5nZNuk2rp51PMGk3bzfWu5oayNEuYnw==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/rollup/-/rollup-2.79.1.tgz}
+  mirrors.tencent.com/rollup/3.5.0:
+    resolution: {integrity: sha512-TYu2L+TGhmNsXCtByont89u+ATQLcDy6A+++PwLXYunRtOm7XnaD+65s1pvewaOxMYR0eOkMXn9/i0saBxxpnQ==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/rollup/-/rollup-3.5.0.tgz}
     name: rollup
-    version: 2.79.1
-    engines: {node: '>=10.0.0'}
+    version: 3.5.0
+    engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
       fsevents: mirrors.tencent.com/fsevents/2.3.2
@@ -876,6 +921,12 @@ packages:
     dependencies:
       whatwg-url: mirrors.tencent.com/whatwg-url/7.1.0
     dev: true
+
+  mirrors.tencent.com/sourcemap-codec/1.4.8:
+    resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/sourcemap-codec/-/sourcemap-codec-1.4.8.tgz}
+    name: sourcemap-codec
+    version: 1.4.8
+    dev: false
 
   mirrors.tencent.com/strip-final-newline/2.0.0:
     resolution: {integrity: sha512-BrpvfNAE3dcvq7ll3xVumzjKjZQ5tI1sEUIKr3Uoks0XUl45St3FlatVqef9prk4jRDzhW6WZg+3bk93y6pLjA==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/strip-final-newline/-/strip-final-newline-2.0.0.tgz}
@@ -946,10 +997,12 @@ packages:
     version: 0.1.13
     dev: true
 
-  mirrors.tencent.com/tsup/5.12.9:
-    resolution: {integrity: sha512-dUpuouWZYe40lLufo64qEhDpIDsWhRbr2expv5dHEMjwqeKJS2aXA/FPqs1dxO4T6mBojo7rvo3jP9NNzaKyDg==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/tsup/-/tsup-5.12.9.tgz}
+  mirrors.tencent.com/tsup/6.5.0_typescript@4.9.3:
+    resolution: {integrity: sha512-36u82r7rYqRHFkD15R20Cd4ercPkbYmuvRkz3Q1LCm5BsiFNUgpo36zbjVhCOgvjyxNBWNKHsaD5Rl8SykfzNA==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/tsup/-/tsup-6.5.0.tgz}
+    id: mirrors.tencent.com/tsup/6.5.0
     name: tsup
-    version: 5.12.9
+    version: 6.5.0
+    engines: {node: '>=14'}
     hasBin: true
     peerDependencies:
       '@swc/core': ^1
@@ -963,23 +1016,44 @@ packages:
       typescript:
         optional: true
     dependencies:
-      bundle-require: mirrors.tencent.com/bundle-require/3.1.2_esbuild@0.14.28
+      bundle-require: mirrors.tencent.com/bundle-require/3.1.2_esbuild@0.15.16
       cac: mirrors.tencent.com/cac/6.7.14
       chokidar: mirrors.tencent.com/chokidar/3.5.3
       debug: mirrors.tencent.com/debug/4.3.4
-      esbuild: mirrors.tencent.com/esbuild/0.14.28
+      esbuild: mirrors.tencent.com/esbuild/0.15.16
       execa: mirrors.tencent.com/execa/5.1.1
       globby: mirrors.tencent.com/globby/11.1.0
       joycon: mirrors.tencent.com/joycon/3.1.1
       postcss-load-config: mirrors.tencent.com/postcss-load-config/3.1.4
       resolve-from: mirrors.tencent.com/resolve-from/5.0.0
-      rollup: mirrors.tencent.com/rollup/2.79.1
+      rollup: mirrors.tencent.com/rollup/3.5.0
       source-map: mirrors.tencent.com/source-map/0.8.0-beta.0
       sucrase: mirrors.tencent.com/sucrase/3.29.0
       tree-kill: mirrors.tencent.com/tree-kill/1.2.2
+      typescript: mirrors.tencent.com/typescript/4.9.3
     transitivePeerDependencies:
       - supports-color
       - ts-node
+    dev: true
+
+  mirrors.tencent.com/typescript-transform-paths/3.4.4_typescript@4.9.3:
+    resolution: {integrity: sha512-b+6JTpJbO9CxVyt9+fIKXpLNUEyzrKXdflsVo/nXbQqelCYkpSsRdI+ikg3SelyE04rUeKlb+Kdt1D8Doa9JoQ==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/typescript-transform-paths/-/typescript-transform-paths-3.4.4.tgz}
+    id: mirrors.tencent.com/typescript-transform-paths/3.4.4
+    name: typescript-transform-paths
+    version: 3.4.4
+    peerDependencies:
+      typescript: '>=3.6.5'
+    dependencies:
+      minimatch: mirrors.tencent.com/minimatch/3.1.2
+      typescript: mirrors.tencent.com/typescript/4.9.3
+    dev: true
+
+  mirrors.tencent.com/typescript/4.9.3:
+    resolution: {integrity: sha512-CIfGzTelbKNEnLpLdGFgdyKhG23CKdKgQPOBc+OUNrkJ2vr+KSzsSV5kq5iWhEQbok+quxgGzrAtGWCyU7tHnA==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/typescript/-/typescript-4.9.3.tgz}
+    name: typescript
+    version: 4.9.3
+    engines: {node: '>=4.2.0'}
+    hasBin: true
     dev: true
 
   mirrors.tencent.com/webidl-conversions/4.0.2:
@@ -1019,291 +1093,4 @@ packages:
     name: yaml
     version: 1.10.2
     engines: {node: '>= 6'}
-    dev: true
-
-  registry.npmmirror.com/@types/chai-subset/1.3.3:
-    resolution: {integrity: sha512-frBecisrNGz+F4T6bcc+NLeolfiojh5FxW2klu669+8BARtyQv2C/GkNW6FUodVe4BroGMP/wER/YDGc7rEllw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/chai-subset/-/chai-subset-1.3.3.tgz}
-    name: '@types/chai-subset'
-    version: 1.3.3
-    dependencies:
-      '@types/chai': registry.npmmirror.com/@types/chai/4.3.0
-    dev: true
-
-  registry.npmmirror.com/@types/chai/4.3.0:
-    resolution: {integrity: sha512-/ceqdqeRraGolFTcfoXNiqjyQhZzbINDngeoAq9GoHa8PPK1yNzTaxWjA6BFWp5Ua9JpXEMSS4s5i9tS0hOJtw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/chai/-/chai-4.3.0.tgz}
-    name: '@types/chai'
-    version: 4.3.0
-    dev: true
-
-  registry.npmmirror.com/assertion-error/1.1.0:
-    resolution: {integrity: sha512-jgsaNduz+ndvGyFt3uSuWqvy4lCnIJiovtouQN5JZHOKCS2QuhEdbcQHFhVksz2N2U9hXJo8odG7ETyWlEeuDw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/assertion-error/-/assertion-error-1.1.0.tgz}
-    name: assertion-error
-    version: 1.1.0
-    dev: true
-
-  registry.npmmirror.com/chai/4.3.6:
-    resolution: {integrity: sha512-bbcp3YfHCUzMOvKqsztczerVgBKSsEijCySNlHHbX3VG1nskvqjz5Rfso1gGwD6w6oOV3eI60pKuMOV5MV7p3Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/chai/-/chai-4.3.6.tgz}
-    name: chai
-    version: 4.3.6
-    engines: {node: '>=4'}
-    dependencies:
-      assertion-error: registry.npmmirror.com/assertion-error/1.1.0
-      check-error: registry.npmmirror.com/check-error/1.0.2
-      deep-eql: registry.npmmirror.com/deep-eql/3.0.1
-      get-func-name: registry.npmmirror.com/get-func-name/2.0.0
-      loupe: registry.npmmirror.com/loupe/2.3.4
-      pathval: registry.npmmirror.com/pathval/1.1.1
-      type-detect: registry.npmmirror.com/type-detect/4.0.8
-    dev: true
-
-  registry.npmmirror.com/check-error/1.0.2:
-    resolution: {integrity: sha512-BrgHpW9NURQgzoNyjfq0Wu6VFO6D7IZEmJNdtgNqpzGG8RuNFHt2jQxWlAs4HMe119chBnv+34syEZtc6IhLtA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/check-error/-/check-error-1.0.2.tgz}
-    name: check-error
-    version: 1.0.2
-    dev: true
-
-  registry.npmmirror.com/deep-eql/3.0.1:
-    resolution: {integrity: sha512-+QeIQyN5ZuO+3Uk5DYh6/1eKO0m0YmJFGNmFHGACpf1ClL1nmlV/p4gNgbl2pJGxgXb4faqo6UE+M5ACEMyVcw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/deep-eql/-/deep-eql-3.0.1.tgz}
-    name: deep-eql
-    version: 3.0.1
-    engines: {node: '>=0.12'}
-    dependencies:
-      type-detect: registry.npmmirror.com/type-detect/4.0.8
-    dev: true
-
-  registry.npmmirror.com/esbuild-darwin-arm64/0.14.28:
-    resolution: {integrity: sha512-XEq/bLR/glsUl+uGrBimQzOVs/CmwI833fXUhP9xrLI3IJ+rKyrZ5IA8u+1crOEf1LoTn8tV+hInmX6rGjbScw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.14.28.tgz}
-    name: esbuild-darwin-arm64
-    version: 0.14.28
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-
-  registry.npmmirror.com/esbuild/0.14.28:
-    resolution: {integrity: sha512-YLNprkCcMVKQ5sekmCKEQ3Obu/L7s6+iij38xNKyBeSmSsTWur4Ky/9zB3XIGT8SCJITG/bZwAR2l7YOAXch4Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild/-/esbuild-0.14.28.tgz}
-    name: esbuild
-    version: 0.14.28
-    engines: {node: '>=12'}
-    hasBin: true
-    requiresBuild: true
-    optionalDependencies:
-      esbuild-android-64: mirrors.tencent.com/esbuild-android-64/0.14.28
-      esbuild-android-arm64: mirrors.tencent.com/esbuild-android-arm64/0.14.28
-      esbuild-darwin-64: mirrors.tencent.com/esbuild-darwin-64/0.14.28
-      esbuild-darwin-arm64: mirrors.tencent.com/esbuild-darwin-arm64/0.14.28
-      esbuild-freebsd-64: mirrors.tencent.com/esbuild-freebsd-64/0.14.28
-      esbuild-freebsd-arm64: mirrors.tencent.com/esbuild-freebsd-arm64/0.14.28
-      esbuild-linux-32: mirrors.tencent.com/esbuild-linux-32/0.14.28
-      esbuild-linux-64: mirrors.tencent.com/esbuild-linux-64/0.14.28
-      esbuild-linux-arm: mirrors.tencent.com/esbuild-linux-arm/0.14.28
-      esbuild-linux-arm64: mirrors.tencent.com/esbuild-linux-arm64/0.14.28
-      esbuild-linux-mips64le: mirrors.tencent.com/esbuild-linux-mips64le/0.14.28
-      esbuild-linux-ppc64le: mirrors.tencent.com/esbuild-linux-ppc64le/0.14.28
-      esbuild-linux-riscv64: mirrors.tencent.com/esbuild-linux-riscv64/0.14.28
-      esbuild-linux-s390x: mirrors.tencent.com/esbuild-linux-s390x/0.14.28
-      esbuild-netbsd-64: mirrors.tencent.com/esbuild-netbsd-64/0.14.28
-      esbuild-openbsd-64: mirrors.tencent.com/esbuild-openbsd-64/0.14.28
-      esbuild-sunos-64: mirrors.tencent.com/esbuild-sunos-64/0.14.28
-      esbuild-windows-32: mirrors.tencent.com/esbuild-windows-32/0.14.28
-      esbuild-windows-64: mirrors.tencent.com/esbuild-windows-64/0.14.28
-      esbuild-windows-arm64: mirrors.tencent.com/esbuild-windows-arm64/0.14.28
-    dev: true
-
-  registry.npmmirror.com/function-bind/1.1.1:
-    resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/function-bind/-/function-bind-1.1.1.tgz}
-    name: function-bind
-    version: 1.1.1
-    dev: true
-
-  registry.npmmirror.com/get-func-name/2.0.0:
-    resolution: {integrity: sha512-Hm0ixYtaSZ/V7C8FJrtZIuBBI+iSgL+1Aq82zSu8VQNB4S3Gk8e7Qs3VwBDJAhmRZcFqkl3tQu36g/Foh5I5ig==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/get-func-name/-/get-func-name-2.0.0.tgz}
-    name: get-func-name
-    version: 2.0.0
-    dev: true
-
-  registry.npmmirror.com/has/1.0.3:
-    resolution: {integrity: sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/has/-/has-1.0.3.tgz}
-    name: has
-    version: 1.0.3
-    engines: {node: '>= 0.4.0'}
-    dependencies:
-      function-bind: registry.npmmirror.com/function-bind/1.1.1
-    dev: true
-
-  registry.npmmirror.com/is-core-module/2.8.1:
-    resolution: {integrity: sha512-SdNCUs284hr40hFTFP6l0IfZ/RSrMXF3qgoRHd3/79unUTvrFO/JoXwkGm+5J/Oe3E/b5GsnG330uUNgRpu1PA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/is-core-module/-/is-core-module-2.8.1.tgz}
-    name: is-core-module
-    version: 2.8.1
-    dependencies:
-      has: registry.npmmirror.com/has/1.0.3
-    dev: true
-
-  registry.npmmirror.com/local-pkg/0.4.1:
-    resolution: {integrity: sha512-lL87ytIGP2FU5PWwNDo0w3WhIo2gopIAxPg9RxDYF7m4rr5ahuZxP22xnJHIvaLTe4Z9P6uKKY2UHiwyB4pcrw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/local-pkg/-/local-pkg-0.4.1.tgz}
-    name: local-pkg
-    version: 0.4.1
-    engines: {node: '>=14'}
-    dev: true
-
-  registry.npmmirror.com/loupe/2.3.4:
-    resolution: {integrity: sha512-OvKfgCC2Ndby6aSTREl5aCCPTNIzlDfQZvZxNUrBrihDhL3xcrYegTblhmEiCrg2kKQz4XsFIaemE5BF4ybSaQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/loupe/-/loupe-2.3.4.tgz}
-    name: loupe
-    version: 2.3.4
-    dependencies:
-      get-func-name: registry.npmmirror.com/get-func-name/2.0.0
-    dev: true
-
-  registry.npmmirror.com/nanoid/3.3.1:
-    resolution: {integrity: sha512-n6Vs/3KGyxPQd6uO0eH4Bv0ojGSUvuLlIHtC3Y0kEO23YRge8H9x1GCzLn28YX0H66pMkxuaeESFq4tKISKwdw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/nanoid/-/nanoid-3.3.1.tgz}
-    name: nanoid
-    version: 3.3.1
-    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
-    hasBin: true
-    dev: true
-
-  registry.npmmirror.com/path-parse/1.0.7:
-    resolution: {integrity: sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/path-parse/-/path-parse-1.0.7.tgz}
-    name: path-parse
-    version: 1.0.7
-    dev: true
-
-  registry.npmmirror.com/pathval/1.1.1:
-    resolution: {integrity: sha512-Dp6zGqpTdETdR63lehJYPeIOqpiNBNtc7BpWSLrOje7UaIsE5aY92r/AunQA7rsXvet3lrJ3JnZX29UPTKXyKQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/pathval/-/pathval-1.1.1.tgz}
-    name: pathval
-    version: 1.1.1
-    dev: true
-
-  registry.npmmirror.com/picocolors/1.0.0:
-    resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/picocolors/-/picocolors-1.0.0.tgz}
-    name: picocolors
-    version: 1.0.0
-    dev: true
-
-  registry.npmmirror.com/postcss/8.4.12:
-    resolution: {integrity: sha512-lg6eITwYe9v6Hr5CncVbK70SoioNQIq81nsaG86ev5hAidQvmOeETBqs7jm43K2F5/Ley3ytDtriImV6TpNiSg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/postcss/-/postcss-8.4.12.tgz}
-    name: postcss
-    version: 8.4.12
-    engines: {node: ^10 || ^12 || >=14}
-    dependencies:
-      nanoid: registry.npmmirror.com/nanoid/3.3.1
-      picocolors: registry.npmmirror.com/picocolors/1.0.0
-      source-map-js: registry.npmmirror.com/source-map-js/1.0.2
-    dev: true
-
-  registry.npmmirror.com/resolve/1.22.0:
-    resolution: {integrity: sha512-Hhtrw0nLeSrFQ7phPp4OOcVjLPIeMnRlr5mcnVuMe7M/7eBn98A3hmFRLoFo3DLZkivSYwhRUJTyPyWAk56WLw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/resolve/-/resolve-1.22.0.tgz}
-    name: resolve
-    version: 1.22.0
-    hasBin: true
-    dependencies:
-      is-core-module: registry.npmmirror.com/is-core-module/2.8.1
-      path-parse: registry.npmmirror.com/path-parse/1.0.7
-      supports-preserve-symlinks-flag: registry.npmmirror.com/supports-preserve-symlinks-flag/1.0.0
-    dev: true
-
-  registry.npmmirror.com/rollup/2.70.1:
-    resolution: {integrity: sha512-CRYsI5EuzLbXdxC6RnYhOuRdtz4bhejPMSWjsFLfVM/7w/85n2szZv6yExqUXsBdz5KT8eoubeyDUDjhLHEslA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/rollup/-/rollup-2.70.1.tgz}
-    name: rollup
-    version: 2.70.1
-    engines: {node: '>=10.0.0'}
-    hasBin: true
-    optionalDependencies:
-      fsevents: mirrors.tencent.com/fsevents/2.3.2
-    dev: true
-
-  registry.npmmirror.com/source-map-js/1.0.2:
-    resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/source-map-js/-/source-map-js-1.0.2.tgz}
-    name: source-map-js
-    version: 1.0.2
-    engines: {node: '>=0.10.0'}
-    dev: true
-
-  registry.npmmirror.com/supports-preserve-symlinks-flag/1.0.0:
-    resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz}
-    name: supports-preserve-symlinks-flag
-    version: 1.0.0
-    engines: {node: '>= 0.4'}
-    dev: true
-
-  registry.npmmirror.com/tinypool/0.1.2:
-    resolution: {integrity: sha512-fvtYGXoui2RpeMILfkvGIgOVkzJEGediv8UJt7TxdAOY8pnvUkFg/fkvqTfXG9Acc9S17Cnn1S4osDc2164guA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tinypool/-/tinypool-0.1.2.tgz}
-    name: tinypool
-    version: 0.1.2
-    engines: {node: '>=14.0.0'}
-    dev: true
-
-  registry.npmmirror.com/tinyspy/0.3.0:
-    resolution: {integrity: sha512-c5uFHqtUp74R2DJE3/Efg0mH5xicmgziaQXMm/LvuuZn3RdpADH32aEGDRyCzObXT1DNfwDMqRQ/Drh1MlO12g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tinyspy/-/tinyspy-0.3.0.tgz}
-    name: tinyspy
-    version: 0.3.0
-    engines: {node: '>=14.0.0'}
-    dev: true
-
-  registry.npmmirror.com/type-detect/4.0.8:
-    resolution: {integrity: sha512-0fr/mIH1dlO+x7TlcMy+bIDqKPsw/70tVyeHW787goQjhmqaZe10uwLujubK9q9Lg6Fiho1KUKDYz0Z7k7g5/g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/type-detect/-/type-detect-4.0.8.tgz}
-    name: type-detect
-    version: 4.0.8
-    engines: {node: '>=4'}
-    dev: true
-
-  registry.npmmirror.com/vite/2.8.6:
-    resolution: {integrity: sha512-e4H0QpludOVKkmOsRyqQ7LTcMUDF3mcgyNU4lmi0B5JUbe0ZxeBBl8VoZ8Y6Rfn9eFKYtdXNPcYK97ZwH+K2ug==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite/-/vite-2.8.6.tgz}
-    name: vite
-    version: 2.8.6
-    engines: {node: '>=12.2.0'}
-    hasBin: true
-    peerDependencies:
-      less: '*'
-      sass: '*'
-      stylus: '*'
-    peerDependenciesMeta:
-      less:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-    dependencies:
-      esbuild: registry.npmmirror.com/esbuild/0.14.28
-      postcss: registry.npmmirror.com/postcss/8.4.12
-      resolve: registry.npmmirror.com/resolve/1.22.0
-      rollup: registry.npmmirror.com/rollup/2.70.1
-    optionalDependencies:
-      fsevents: mirrors.tencent.com/fsevents/2.3.2
-    dev: true
-
-  registry.npmmirror.com/vitest/0.7.12:
-    resolution: {integrity: sha512-Q/UrBAhStPUeic++s+jnH6M0vsBhemTixAsAKvp6z8zN6K47tfZqob4XgpbViebDmYcmhlyREumVmrpUlyuXdA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vitest/-/vitest-0.7.12.tgz}
-    name: vitest
-    version: 0.7.12
-    engines: {node: '>=v14.16.0'}
-    hasBin: true
-    peerDependencies:
-      '@vitest/ui': '*'
-      c8: '*'
-      happy-dom: '*'
-      jsdom: '*'
-    peerDependenciesMeta:
-      '@vitest/ui':
-        optional: true
-      c8:
-        optional: true
-      happy-dom:
-        optional: true
-      jsdom:
-        optional: true
-    dependencies:
-      '@types/chai': registry.npmmirror.com/@types/chai/4.3.0
-      '@types/chai-subset': registry.npmmirror.com/@types/chai-subset/1.3.3
-      chai: registry.npmmirror.com/chai/4.3.6
-      local-pkg: registry.npmmirror.com/local-pkg/0.4.1
-      tinypool: registry.npmmirror.com/tinypool/0.1.2
-      tinyspy: registry.npmmirror.com/tinyspy/0.3.0
-      vite: registry.npmmirror.com/vite/2.8.6
-    transitivePeerDependencies:
-      - less
-      - sass
-      - stylus
     dev: true

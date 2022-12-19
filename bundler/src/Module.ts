@@ -52,13 +52,13 @@ export class Module {
   code: string;
   magicString: MagicString;
   statements: Statement[];
-  imports: Imports;
-  exports: Exports;
+  imports: Imports; // 以导入模块重命名后的name为key，映射到原模块中的名称，路径
+  exports: Exports; // 同上，存储当前模块的导出信息
   reexports: Exports;
   exportAllSources: string[] = [];
   exportAllModules: Module[] = [];
   declarations: Record<string, Declaration>;
-  dependencies: string[] = [];
+  dependencies: string[] = []; // import的依赖路径
   dependencyModules: Module[] = [];
   referencedModules: Module[] = [];
   constructor({ path, bundle, code, loader, isEntry = false }: ModuleOptions) {
@@ -118,24 +118,27 @@ export class Module {
     }
   }
 
+  // 收集这个模块的import导入关系
   addImports(statement: Statement) {
     const node = statement.node as any;
-    const source = node.source.value;
+    const source = node.source.value; // import的路径
     // import
     node.specifiers.forEach((specifier: Specifier) => {
-      const isDefault = specifier.type === 'ImportDefaultSpecifier';
-      const isNamespace = specifier.type === 'ImportNamespaceSpecifier';
-      const localName = specifier.local.name;
+      const isDefault = specifier.type === 'ImportDefaultSpecifier'; // import a from './a'
+      const isNamespace = specifier.type === 'ImportNamespaceSpecifier'; // import *
+      const localName = specifier.local.name; // 引入的模块在本地的名称，如果有as是被as后的名称
+      // name就是在被导入模块中的原名
       const name = isDefault
         ? 'default'
         : isNamespace
         ? '*'
-        : specifier.imported.name;
+        : specifier.imported.name; // 如果是default就为defailt,如果为*就为*,否则为被重命名之前的名字
       this.imports[localName] = { source, name, localName };
     });
     this.addDependencies(source);
   }
 
+  // 收集这个模块的导出关系
   addExports(statement: Statement) {
     const node = statement.node as any;
     const source = node.source && node.source.value;
@@ -149,7 +152,9 @@ export class Module {
             localName,
             name: exportedName
           };
+          // 如果有source说明是重导出
           if (source) {
+            // 收集到重导出中
             this.reexports[localName] = {
               statement,
               source,
@@ -157,6 +162,7 @@ export class Module {
               name: localName,
               module: undefined
             };
+            // 重导出要先导入所以把这个source也加入到import中
             this.imports[localName] = {
               source,
               localName,
@@ -212,19 +218,23 @@ export class Module {
     this.bindReferences();
   }
 
+  // 建立模块之间的依赖关系
   bindImportSpecifiers() {
+    // 向imports和reexports中添加具体的模块信息
     [...Object.values(this.imports), ...Object.values(this.reexports)].forEach(
       (specifier) => {
         specifier.module = this._getModuleBySource(specifier.source!);
       }
     );
+    // 同上
     this.exportAllModules = this.exportAllSources.map(
       this._getModuleBySource.bind(this)
     );
-    // 建立模块依赖图
+    // 同上
     this.dependencyModules = this.dependencies.map(
       this._getModuleBySource.bind(this)
     );
+    // 同上
     this.dependencyModules.forEach((module) => {
       module.referencedModules.push(this);
     });
@@ -240,6 +250,7 @@ export class Module {
         );
       }
     }
+    // buildScope中收集了每个module中每个statement中的reference，即在哪些node中有引用变量
     this.statements.forEach((statement) => {
       statement.references.forEach((reference) => {
         // 根据引用寻找声明的位置
@@ -259,6 +270,8 @@ export class Module {
     }
     return this.declarations['*'];
   }
+
+  // 从当前模块的声明语句中找到name变量的声明语句，有可能是当前模块声明的，也有可能是import引入的
   trace(name: string) {
     if (this.declarations[name]) {
       // 从当前模块找
@@ -279,6 +292,7 @@ export class Module {
     return null;
   }
 
+  // 从当前模块的export语句中找到name变量的声明节点
   traceExport(name: string): Declaration | null {
     // 1. reexport
     // export { foo as bar } from './mod'

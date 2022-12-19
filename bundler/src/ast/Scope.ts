@@ -15,13 +15,14 @@ export class Scope {
   paramNodes: any[];
   isBlockScope?: boolean;
   statement: Statement;
-  declarations: Record<string, Declaration> = {};
+  declarations: Record<string, Declaration> = {}; // 一个作用域中的变量，我们需要去收集一个作用域中的变量
   constructor(options: ScopeOptions) {
     const { parent, paramNodes, block, statement } = options;
     this.parent = parent;
     this.paramNodes = paramNodes || [];
     this.statement = statement;
     this.isBlockScope = !!block;
+    // 如果是函数的作用域，我们需要把这个函数的参数添加到这个作用域中
     this.paramNodes.forEach(
       (node) =>
         (this.declarations[node.name] = new Declaration(

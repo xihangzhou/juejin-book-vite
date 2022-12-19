@@ -32,9 +32,10 @@ export class Statement {
     this.magicString = magicString;
     this.node = node;
     this.module = module;
+    // 在创建一个statement，即一整个语句的时候给一个初始的作用域
     this.scope = new Scope({
       statement: this
-    });
+    }); 
     this.start = node.start;
     this.next = 0;
     this.isImportDeclaration = isImportDeclaration(node);

@@ -3,6 +3,7 @@ import { Module } from '../Module';
 import { Statement } from '../Statement';
 import { Reference } from './Reference';
 
+// 变量声明的管理实例，和一个statement,即一个语句建立关系
 export class Declaration {
   isFunctionDeclaration: boolean = false;
   functionNode: any;
